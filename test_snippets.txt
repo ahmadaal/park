@@ -1,0 +1,6 @@
+db.find_block("27TH AVE", 458, "East")[0].cleaning_schedule_this_month() 
+
+
+db.find_block("27TH AVE", 458, "East")[0].cleaning_schedule(datetime.datetime.now(), datetime.datetime.now() + timedelta(20))
+
+pp [data.strftime("%A %d %B %Y") for date in db.find_block("27TH AVE", 458, "East")[0].cleaning_schedule_this_month()]
